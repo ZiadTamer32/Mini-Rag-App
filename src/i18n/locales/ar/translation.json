@@ -1,0 +1,21 @@
+{
+  "left": "يسار",
+  "middle": "المنتصف",
+  "right": "يمين",
+  "search notes": "بحث في الملاحظات",
+  "create your first notebook or note to get started with AI-powered note-taking": ".قم بإنشاء دفتر ملاحظاتك أو ملاحظتك الأولى للبدء في تدوين الملاحظات باستخدام الذكاء الاصطناعي",
+  "welcome to Mini-Rag-App": "مرحبا بك في Mini-Rag-App",
+  "create new notebook": "انشاء دفتر ملاحظات جديد",
+  "organize your notes by topic": "نظم ملاحظاتك حسب الموضوع",
+  "new notebook": "دفتر ملاحظات جديد",
+  "settings": "الإعدادات",
+  "right section": "القسم الأيمن",
+  "projects": "المشاريع",
+  "project": "مشروع",
+  "chat": "دردشة",
+  "add a source to get started": "إضافة مصدر للبدء",
+  "upload a file": "رفع ملف",
+  "you must upload a file first": "يجب عليك رفع الملف أولا",
+  "start typing...": "بدء الكتابة...",
+  "model": "موديل"
+}
