@@ -1,37 +1,32 @@
 import { Moon, Sun } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { useTheme } from "@/context/ThemeProvider";
+import { useTranslation } from "react-i18next";
 
 export function ModeToggle() {
-  const { setTheme } = useTheme();
+  const { t } = useTranslation();
+  const { setTheme, theme } = useTheme();
+
+  const isDark = theme === "dark";
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
-          <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <Button
+      variant="outline"
+      size="icon"
+      aria-label={t("Toggle theme")}
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+    >
+      <Sun
+        className={`h-[1.2rem] w-[1.2rem] transition-all ${
+          isDark ? "scale-0 rotate-90" : "scale-100 rotate-0"
+        }`}
+      />
+      <Moon
+        className={`absolute h-[1.2rem] w-[1.2rem] transition-all ${
+          isDark ? "scale-100 rotate-0" : "scale-0 -rotate-90"
+        }`}
+      />
+      <span className="sr-only">{t("Toggle theme")}</span>
+    </Button>
   );
 }

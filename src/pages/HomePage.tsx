@@ -9,9 +9,11 @@ const HomePage = () => {
   const isMobile = useIsMobile();
   const { t } = useTranslation();
   const dir = localStorage.getItem("dir") || "ltr";
-  const [active, setActive] = useState<"left" | "middle" | "right">("middle");
-  const toggleSwitch: ("left" | "middle" | "right")[] =
-    dir === "rtl" ? ["right", "middle", "left"] : ["left", "middle", "right"];
+  const [active, setActive] = useState<"left" | "chat" | "resources">("chat");
+  const toggleSwitch: ("left" | "chat" | "resources")[] =
+    dir === "rtl"
+      ? ["resources", "chat", "left"]
+      : ["left", "chat", "resources"];
 
   return (
     <>
@@ -46,8 +48,8 @@ const HomePage = () => {
           </ul>
           <div className="min-h-[calc(100vh-8rem)] flex justify-center">
             {active === "left" && <SideBar />}
-            {active === "middle" && <MiddleSection />}
-            {active === "right" && <RightSection />}
+            {active === "chat" && <MiddleSection />}
+            {active === "resources" && <RightSection />}
           </div>
         </div>
       )}

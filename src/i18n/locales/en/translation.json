@@ -1,4 +1,6 @@
 {
+  "dark": "Dark",
+  "light": "Light",
   "left": "Left",
   "middle": "Middle",
   "right": "Right",
@@ -17,5 +19,7 @@
   "upload a file": "Upload a File",
   "you must upload a file first": "You must upload a file first",
   "start typing...": "Start typing...",
-  "model": "Model"
+  "model": "Model",
+  "resources": "Resources",
+  "resource": "Resource"
 }

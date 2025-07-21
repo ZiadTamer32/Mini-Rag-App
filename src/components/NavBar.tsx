@@ -1,15 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { ModeToggle } from "./ModeToggle";
-import { LogIn, Menu, UserPen, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import InputSearch from "./InputSearch";
 import { useTranslation } from "react-i18next";
-
-const menuList = [
-  { icon: <LogIn />, title: "Login", url: "/login" },
-  { icon: <UserPen />, title: "Register", url: "/register" },
-];
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,17 +64,6 @@ const NavBar = () => {
           <div className="w-full flex items-center border border-input bg-background/50 backdrop-blur-sm rounded-md pl-2 transition-all duration-200 focus-within:ring-2 focus-within:ring-ring focus-within:border-ring">
             <InputSearch />
           </div>
-          {/* Mobile Links */}
-          {menuList.map((item) => (
-            <Link
-              key={item.title}
-              to={item.url}
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:bg-accent px-4 py-2 rounded-sm hover:text-primary transition-colors w-full"
-            >
-              {item.icon}
-              {item.title}
-            </Link>
-          ))}
         </div>
       )}
     </nav>

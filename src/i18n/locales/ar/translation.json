@@ -1,4 +1,6 @@
 {
+  "dark": "داكن",
+  "light": "فاتح",
   "left": "يسار",
   "middle": "المنتصف",
   "right": "يمين",
@@ -17,5 +19,7 @@
   "upload a file": "رفع ملف",
   "you must upload a file first": "يجب عليك رفع الملف أولا",
   "start typing...": "بدء الكتابة...",
-  "model": "موديل"
+  "model": "نموذج",
+  "resources": "مصادر",
+  "resource": "مصدر"
 }
